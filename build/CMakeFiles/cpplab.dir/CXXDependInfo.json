@@ -1,0 +1,34 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "Clang",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "/home/proj/game-engine/build",
+	"dir-cur-src" : "/home/proj/game-engine",
+	"dir-top-bld" : "/home/proj/game-engine/build",
+	"dir-top-src" : "/home/proj/game-engine",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include",
+		"/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include",
+		"/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1",
+		"/nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include",
+		"/nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/proj/game-engine/build/CMakeFiles/cpplab.dir",
+	"sources" : 
+	{
+		"CMakeFiles/cpplab.dir/src/main.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/proj/game-engine/src/main.cpp"
+		}
+	}
+}

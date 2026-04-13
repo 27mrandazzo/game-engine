@@ -1,0 +1,7 @@
+# ninja log v6
+1	53	1776095901860831364	CMakeFiles/cpplab.dir/src/main.cpp.o.ddi	8655759a7a2145a8
+53	62	1776095901921838403	CMakeFiles/cpplab.dir/CXX.dd	21394bfda5c3e857
+53	62	1776095901921838403	/home/proj/game-engine/build/CMakeFiles/cpplab.dir/CXXModules.json	21394bfda5c3e857
+53	62	1776095901921838403	CMakeFiles/cpplab.dir/src/main.cpp.o.modmap	21394bfda5c3e857
+62	113	1776095901922605971	CMakeFiles/cpplab.dir/src/main.cpp.o	cc9d6b99ad5ed184
+113	191	1776095901973787307	cpplab	5833251e164107b8
