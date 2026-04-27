@@ -1,3 +1,12 @@
 ninja_dyndep_version = 1.0
-build CMakeFiles/cpplab.dir/src/main.cpp.o: dyndep
+build CMakeFiles/cpplab.dir/src/main.cpp.o: dyndep | CMakeFiles/cpplab.dir/util.pcm
+
+build CMakeFiles/cpplab.dir/src/engine.cppm.o | CMakeFiles/cpplab.dir/engine.pcm: dyndep | CMakeFiles/cpplab.dir/util.pcm
+  restat = 1
+
+build CMakeFiles/cpplab.dir/src/util.cppm.o | CMakeFiles/cpplab.dir/util.pcm: dyndep
+  restat = 1
+
+build CMakeFiles/cpplab.dir/src/dag.cppm.o | CMakeFiles/cpplab.dir/dag.pcm: dyndep
+  restat = 1
 

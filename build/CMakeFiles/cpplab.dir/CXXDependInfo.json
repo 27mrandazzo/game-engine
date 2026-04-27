@@ -3,8 +3,40 @@
 	"compiler-frontend-variant" : "GNU",
 	"compiler-id" : "Clang",
 	"compiler-simulate-id" : "",
-	"config" : "",
-	"cxx-modules" : {},
+	"config" : "Debug",
+	"cxx-modules" : 
+	{
+		"CMakeFiles/cpplab.dir/src/dag.cppm.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "cxx_modules",
+			"relative-directory" : "src",
+			"source" : "/home/proj/game-engine/src/dag.cppm",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/cpplab.dir/src/engine.cppm.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "cxx_modules",
+			"relative-directory" : "src",
+			"source" : "/home/proj/game-engine/src/engine.cppm",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/cpplab.dir/src/util.cppm.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "cxx_modules",
+			"relative-directory" : "src",
+			"source" : "/home/proj/game-engine/src/util.cppm",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		}
+	},
 	"database-info" : null,
 	"dir-cur-bld" : "/home/proj/game-engine/build",
 	"dir-cur-src" : "/home/proj/game-engine",

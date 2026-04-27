@@ -1,5 +1,45 @@
 {
-	"modules" : {},
-	"references" : {},
-	"usages" : {}
+	"modules" : 
+	{
+		"dag" : 
+		{
+			"bmi" : "/home/proj/game-engine/build/CMakeFiles/cpplab.dir/dag.pcm",
+			"is-private" : false
+		},
+		"engine" : 
+		{
+			"bmi" : "/home/proj/game-engine/build/CMakeFiles/cpplab.dir/engine.pcm",
+			"is-private" : false
+		},
+		"util" : 
+		{
+			"bmi" : "/home/proj/game-engine/build/CMakeFiles/cpplab.dir/util.pcm",
+			"is-private" : false
+		}
+	},
+	"references" : 
+	{
+		"dag" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/cpplab.dir/dag.pcm"
+		},
+		"engine" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/cpplab.dir/engine.pcm"
+		},
+		"util" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/cpplab.dir/util.pcm"
+		}
+	},
+	"usages" : 
+	{
+		"engine" : 
+		[
+			"util"
+		]
+	}
 }

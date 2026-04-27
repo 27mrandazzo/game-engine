@@ -2,7 +2,12 @@
   "revision": 0,
   "rules": [
     {
-      "primary-output": "CMakeFiles/cpplab.dir/src/main.cpp.o"
+      "primary-output": "CMakeFiles/cpplab.dir/src/main.cpp.o",
+      "requires": [
+        {
+          "logical-name": "util"
+        }
+      ]
     }
   ],
   "version": 1

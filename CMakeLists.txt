@@ -9,7 +9,7 @@ project(CppTestLab VERSION ${PROJECT_VERSION}
                    DESCRIPTION ${PROJECT_DESCRIPTION}
                    LANGUAGES CXX)
 
-add_executable(cpplab src/main.cpp)
+add_executable(cpplab)
 
 target_compile_features(cpplab PUBLIC cxx_std_26)
 
@@ -17,6 +17,16 @@ if(CMAKE_EXPORT_COMPILE_COMMANDS)
   set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES 
       ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
 endif()
+
+target_sources(cpplab
+  PRIVATE
+    src/main.cpp
+  PUBLIC
+    FILE_SET cxx_modules TYPE CXX_MODULES FILES
+      src/engine.cppm
+      src/util.cppm 
+      src/dag.cppm
+)
 
 set_target_properties(cpplab PROPERTIES CXX_EXTENSIONS OFF)
 

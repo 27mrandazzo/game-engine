@@ -1,0 +1,21 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/cpplab.dir/src/engine.cppm.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "engine",
+          "source-path": "/home/proj/game-engine/src/engine.cppm"
+        }
+      ],
+      "requires": [
+        {
+          "logical-name": "util"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

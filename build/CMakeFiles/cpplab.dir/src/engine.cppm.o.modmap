@@ -1,0 +1,3 @@
+-x c++-module
+-fmodule-output=CMakeFiles/cpplab.dir/engine.pcm
+-fmodule-file=util=CMakeFiles/cpplab.dir/util.pcm

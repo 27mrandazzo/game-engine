@@ -1,0 +1,16 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/cpplab.dir/src/mod1.cppm.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "mod1",
+          "source-path": "/home/proj/game-engine/src/mod1.cppm"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}
