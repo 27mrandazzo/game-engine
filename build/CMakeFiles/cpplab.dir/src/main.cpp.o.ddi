@@ -5,7 +5,7 @@
       "primary-output": "CMakeFiles/cpplab.dir/src/main.cpp.o",
       "requires": [
         {
-          "logical-name": "util"
+          "logical-name": "engine"
         }
       ]
     }

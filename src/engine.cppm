@@ -3,29 +3,45 @@ module;
 #include <cstdint>
 #include <cstdlib>
 #include <concepts>
-#include <limits>
+#include <cassert>
+#include <cstddef>
 
 export module engine;
 
 import util;
 
-using util::Vector;
 using util::Array;
 
-export template <std::size_t WORLD_SIZE = 1024>
-class EntityID {
-    
-    static constexpr std::size_t SIZE_T_MAX = std::numeric_limits<std::size_t>::max();
-    static_assert(WORLD_SIZE != SIZE_T_MAX, "SIZE_T_MAX must be left for sentinel value");
-    static constexpr std::size_t SENTINEL = SIZE_T_MAX; 
+#define DEFINE_INDEX_TYPE(Name) \
+    struct Name##_T {};         \
+    using Name = util::Index<Name##_T>
 
-    std::size_t value;
+constexpr std::size_t WORLD_SIZE = 1024;
 
-    constexpr EntityID(std::integral auto val) {
-        value = val;
+export class EntityID {
+public:
+    static constexpr auto create(std::integral auto n) -> EntityID {
+        // PRECONDITION
+        assert(n != SENTINEL);
+        assert(n < WORLD_SIZE);
+        
+        return EntityID(n);
+    }
+    static constexpr auto sentinel() -> EntityID {
+        return EntityID(SENTINEL);
     }
 
-    explicit constexpr EntityID(std::uint32_t n) : value(n) {};
+    operator std::size_t(this const EntityID& self) {
+        return self.value;
+    }
+
+    auto operator<=>(const EntityID& other) const = default;
+private:
+    std::size_t value;
+    
+    static const std::size_t SENTINEL = 0;
+
+    constexpr EntityID(std::integral auto val) : value(val) {};
 };
 
 /// RTTI
@@ -33,45 +49,36 @@ export struct ComponentID {
     std::size_t typeIdx;
 
     explicit constexpr ComponentID(std::uint32_t typeIdx) : typeIdx(typeIdx) {};
-};
+}; 
 
-template <util::IndexType I, typename T>
-class PackedList {
+
+export class SparseSet {
 public:
-    explicit PackedList() {}
+    explicit SparseSet(std::size_t c_size) : packed_components(c_size) {}
 
-    auto push(this auto& self, T val) -> void {
-        self.data.push_back(val);
-    }
-    auto pop(this auto& self, I idx) -> void {
-        if (idx >= self.data.size() || idx == self.data.size() - 1) {
-            return;
-        }
+    void add(this auto& self, EntityID e, std::invocable<std::byte*> auto cstr) {
+        assert(e != EntityID::sentinel());
 
-        // Remove item, and put last into that spot, to keep list compact.
-        T end = self.data.pop_back().value();
-        self.data.at(idx) = end;
+        self.indicies[e] = self.packed_entities.size();
+
+        self.packed_entities.emplace_back(e);
+        self.packed_components.emplace_back(cstr);
     }
-    auto for_each(this auto& self, std::invocable<T> auto f) {
-        for (T& item : self.data) f();
-    };
+
+    void remove(this auto& self, EntityID e) {
+        self.indicies.at(e) = EntityID::sentinel();
+        size_t last_idx = self.packed_entities.size() - 1;
+        self.packed_entities.pop_swap(last_idx);
+        self.packed_components.pop_swap(last_idx);
+    }
+
+    auto query(this auto& self) -> util::raw::Span {
+        return self.packed_components.span();
+    }
+    
 
 private:
-    util::Vector<I, T> data;
+    Array<EntityID, std::size_t, WORLD_SIZE> indicies;
+    util::Vec<EntityID> packed_entities;
+    util::raw::Vec packed_components;
 };
-
-
-template <std::size_t UNIVERSE_SIZE>
-class SparseSet {
-public:
-    explicit SparseSet() {}
-
-private:
-    struct PackedIdx_T {};
-    using PackedIdx = util::Index<PackedIdx_T>;
-
-    Array<EntityID<>, PackedIdx, UNIVERSE_SIZE> indicies;
-    PackedList<PackedIdx, EntityID<>> packed_entities;
-    PackedList<PackedIdx, std::byte> packed_components;
-};
-

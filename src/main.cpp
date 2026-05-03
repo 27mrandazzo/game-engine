@@ -1,14 +1,19 @@
 #include <print>
 
-import util;
+import engine;
 
 auto main() -> int {
     std::print("Hello world!");
     
-    struct T {};
-    using Idx = util::Index<T>;
-    util::Vector vec = util::Vector<int, Idx>({2, 3, 5});
-    vec.update(Idx(3), [](int x) { x++; });
+    auto ss = SparseSet(sizeof(std::string));
+
+    ss.add(EntityID::create(3), [](std::byte* b) { 
+        std::construct_at(reinterpret_cast<std::string*>(b), "hello world!"); 
+    });
+
+    for (auto ref : ss.query()) {
+        std::println("{}", *reinterpret_cast<std::string*>(ref.ptr()));
+    }
 
     return 0;
 }
