@@ -1,5 +1,8 @@
 module;
 
+#include <algorithm>
+#include <typeindex>
+#include <unordered_map>
 #include <cstdint>
 #include <cstdlib>
 #include <concepts>
@@ -44,14 +47,6 @@ private:
     constexpr EntityID(std::integral auto val) : value(val) {};
 };
 
-/// RTTI
-export struct ComponentID {
-    std::size_t typeIdx;
-
-    explicit constexpr ComponentID(std::uint32_t typeIdx) : typeIdx(typeIdx) {};
-}; 
-
-
 export class SparseSet {
 public:
     explicit SparseSet(std::size_t c_size) : packed_components(c_size) {}
@@ -81,4 +76,37 @@ private:
     Array<EntityID, std::size_t, WORLD_SIZE> indicies;
     util::Vec<EntityID> packed_entities;
     util::raw::Vec packed_components;
+};
+
+export class EntityManager {
+public:
+    template<typename C>
+    auto register_component(this EntityManager& self) {
+        const auto id = std::type_index(typeid(C));
+        self.stores.emplace(id, SparseSet(sizeof(C)));
+    }
+
+    template <typename C>
+    auto add(this EntityManager& self, EntityID entity, auto&&... args) {
+        auto& set = self.stores.at(std::type_index(typeid(C)));
+        set.add(entity, [&](std::byte* new_spot) {
+            std::construct_at(reinterpret_cast<C*>(new_spot), std::forward<decltype(args)>(args)...);
+        });
+    }
+
+    template <typename C>
+    auto remove(this EntityManager& self, EntityID entity) {
+        auto& set = self.stores.at(std::type_index(typeid(C)));
+        set.remove(entity);
+    }
+
+    template <typename C>
+    auto transform(this EntityManager& self, std::invocable<C&> auto f) {
+        auto items = self.stores.at(std::type_index(typeid(C))).query();
+        for (auto item : items) {
+            f(*reinterpret_cast<C*>(item.ptr()));
+        }
+    }
+private:
+    std::unordered_map<std::type_index, SparseSet> stores;
 };

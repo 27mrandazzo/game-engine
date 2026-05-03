@@ -2,17 +2,30 @@
 
 import engine;
 
+struct Rigidbody { double dx; double dy; };
+struct Transform { double x; double y; };
+struct RenderMesh {};
+
 auto main() -> int {
     std::print("Hello world!");
     
-    auto ss = SparseSet(sizeof(std::string));
+    auto em = EntityManager();
+    em.register_component<Rigidbody>();
+    em.register_component<Transform>();
+    em.register_component<RenderMesh>();
 
-    ss.add(EntityID::create(3), [](std::byte* b) { 
-        std::construct_at(reinterpret_cast<std::string*>(b), "hello world!"); 
-    });
+    auto charlie = EntityID::create(1);
+    auto freud = EntityID::create(2);
 
-    for (auto ref : ss.query()) {
-        std::println("{}", *reinterpret_cast<std::string*>(ref.ptr()));
+    em.add<Transform>(charlie, 10.5, 11.5);
+    em.add<Rigidbody>(freud, 0.1, 0.3);
+
+    for (int i = 0; i < 10; i++) {
+        em.transform<Transform>([](auto& c) {
+            c.x += 1;
+            c.y -= 1;
+            std::println("{} {}", c.x, c.y);
+        });
     }
 
     return 0;
