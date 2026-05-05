@@ -1,32 +1,51 @@
+#include "SDL3/SDL_events.h"
+#include "SDL3/SDL_init.h"
+#include "SDL3/SDL_pixels.h"
+#include "SDL3/SDL_render.h"
+#include "SDL3/SDL_surface.h"
+#include "SDL3/SDL_video.h"
+#include <cassert>
 #include <print>
+#include <SDL3/SDL.h>
+#include <ratio>
+#include <thread>
+#include <chrono>
 
 import engine;
 
-struct Rigidbody { double dx; double dy; };
+using namespace std::chrono_literals;
+
+constexpr int w = 500;
+constexpr int h = 800;
+
 struct Transform { double x; double y; };
-struct RenderMesh {};
+struct CollisionMesh { };
 
 auto main() -> int {
     std::print("Hello world!");
     
-    auto em = EntityManager();
-    em.register_component<Rigidbody>();
-    em.register_component<Transform>();
-    em.register_component<RenderMesh>();
+    assert(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO));
 
-    auto charlie = EntityID::create(1);
-    auto freud = EntityID::create(2);
+    auto window = SDL_CreateWindow("Game 1", w, h, 0);
+    auto renderer = SDL_CreateRenderer(window, nullptr);
 
-    em.add<Transform>(charlie, 10.5, 11.5);
-    em.add<Rigidbody>(freud, 0.1, 0.3);
+    SDL_Log("%s", SDL_GetError());
+    assert(window != nullptr);
+    assert(renderer != nullptr);
 
-    for (int i = 0; i < 10; i++) {
-        em.transform<Transform>([](auto& c) {
-            c.x += 1;
-            c.y -= 1;
-            std::println("{} {}", c.x, c.y);
-        });
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_RenderClear(renderer);
+    SDL_RenderPresent(renderer);
+
+    SDL_UpdateWindowSurface(window);
+
+    SDL_Event event;
+    while (SDL_WaitEvent(&event)) {
+        if (event.type == SDL_EVENT_QUIT) break;
     }
 
-    return 0;
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    
+    
 }

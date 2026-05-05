@@ -30,6 +30,9 @@ target_sources(cpplab
 
 set_target_properties(cpplab PROPERTIES CXX_EXTENSIONS OFF)
 
+find_package(SDL3 REQUIRED CONFIG)
+target_link_libraries(cpplab PRIVATE SDL3::SDL3)
+
 install(TARGETS cpplab
         RUNTIME DESTINATION bin
 )

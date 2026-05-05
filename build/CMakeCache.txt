@@ -219,6 +219,9 @@ PROJECT_DESCRIPTION:STRING=
 //Project version
 PROJECT_VERSION:STRING=
 
+//The directory containing a CMake configuration file for SDL3.
+SDL3_DIR:PATH=/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3
+
 
 ########################
 # INTERNAL cache entries

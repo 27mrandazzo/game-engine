@@ -12,6 +12,7 @@
 		[
 			"add_executable",
 			"install",
+			"target_link_libraries",
 			"target_compile_features",
 			"target_sources"
 		],
@@ -33,17 +34,23 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 33,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 14,
+				"line" : 34,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
+				"file" : 0,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
 				"file" : 0,
 				"line" : 21,
 				"parent" : 0
@@ -61,6 +68,10 @@
 			],
 			"includes" : 
 			[
+				{
+					"backtrace" : 3,
+					"path" : "/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include"
+				},
 				{
 					"isSystem" : true,
 					"path" : "/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include"
@@ -87,7 +98,7 @@
 			{
 				"backtraces" : 
 				[
-					3
+					4
 				],
 				"standard" : "26"
 			},
@@ -138,6 +149,15 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib/libSDL3.so.0.2.12",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
@@ -165,25 +185,25 @@
 	"sources" : 
 	[
 		{
-			"backtrace" : 4,
+			"backtrace" : 5,
 			"compileGroupIndex" : 0,
 			"path" : "src/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 4,
+			"backtrace" : 5,
 			"compileGroupIndex" : 0,
 			"path" : "src/engine.cppm",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 4,
+			"backtrace" : 5,
 			"compileGroupIndex" : 0,
 			"path" : "src/util.cppm",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 4,
+			"backtrace" : 5,
 			"compileGroupIndex" : 0,
 			"path" : "src/dag.cppm",
 			"sourceGroupIndex" : 0

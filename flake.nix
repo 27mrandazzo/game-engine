@@ -25,8 +25,8 @@
               description = "Game engine!";
             };
             deps = {
-              runtime = with pkgs; [ ];
-              build = with pkgs; [ cmake ninja ];
+              runtime = with pkgs; [ sdl3 ];
+              build = with pkgs; [ cmake ninja pkg-config ];
               devel = with pkgs; [ clang-tools ];
             };
             mkPkg = { 
