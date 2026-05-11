@@ -1,3 +1,4 @@
+#include "SDL3/SDL_error.h"
 #include "SDL3/SDL_events.h"
 #include "SDL3/SDL_init.h"
 #include "SDL3/SDL_pixels.h"
@@ -22,16 +23,25 @@ struct Transform { double x; double y; };
 struct CollisionMesh { };
 
 auto main() -> int {
-    std::print("Hello world!");
-    
-    assert(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO));
+    std::print("Hello world");
+
+    if (!SDL_Init(SDL_INIT_VIDEO)) {
+        SDL_Log("%s", SDL_GetError());
+    }
 
     auto window = SDL_CreateWindow("Game 1", w, h, 0);
-    auto renderer = SDL_CreateRenderer(window, nullptr);
-
-    SDL_Log("%s", SDL_GetError());
     assert(window != nullptr);
+
+    auto renderer = SDL_CreateRenderer(window, nullptr);
     assert(renderer != nullptr);
+    
+    auto emgr = EntityManager();
+    emgr.register_component<Transform>();
+    emgr.register_component<CollisionMesh>();
+
+    emgr.transform<Transform, CollisionMesh>([](auto& t, auto& cm) {
+        
+    });
 
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(renderer);
@@ -45,6 +55,9 @@ auto main() -> int {
     }
 
     SDL_DestroyRenderer(renderer);
+    
+
+    // SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     
     

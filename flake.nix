@@ -25,7 +25,12 @@
               description = "Game engine!";
             };
             deps = {
-              runtime = with pkgs; [ sdl3 ];
+              runtime = with pkgs; [ 
+                pkgs.mesa
+                pkgs.libGL
+                pkgs.wayland
+                pkgs.libxkbcommon
+               ];
               build = with pkgs; [ cmake ninja pkg-config ];
               devel = with pkgs; [ clang-tools ];
             };
@@ -41,6 +46,7 @@
                 cmakeFlags = [
                   "-DPROJECT_VERSION=${meta.version}"
                   "-DPROJECT_DESCRIPTION=${meta.description}"
+                  "-DCMAKE_EXE_LINKER_FLAGS=-Wl,-rpath,${pkgs.libglvnd}/lib"
                 ];
                 
                 # shellHook = ''
@@ -50,7 +56,16 @@
             };
           };
             packages.default = mkPkg.cpp-template;           
-            #devShells.default = [ packages.default ] ++ deps.devel;
+            devShells.default = pkgs.mkShell {
+              packages = deps.build ++ deps.devel;
+              inputsFrom = [ packages.default ];
+              
+              shellHook = ''
+                export LD_LIBRARY_PATH=${pkgs.mesa}/lib:${pkgs.libGL}/lib:${pkgs.wayland}/lib:$LD_LIBRARY_PATH
+                export LIBGL_ALWAYS_SOFTWARE=1
+                export __EGL_VENDOR_LIBRARY_DIRS=${pkgs.mesa}/share/glvnd/egl_vendor.d
+              '';
+            };
           };
         };
     }

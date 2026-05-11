@@ -67,8 +67,23 @@ public:
         self.packed_components.pop_swap(last_idx);
     }
 
+    auto entity_at(std::size_t idx) -> EntityID {
+        return packed_entities[idx];
+    }
+
     auto query(this auto& self) -> util::raw::Span {
         return self.packed_components.span();
+    }
+
+    auto get(this auto& self, EntityID e) -> util::raw::Ref {
+        return self.packed_components.at(e);
+    }
+
+    auto size(this const auto& self) -> std::size_t {
+        return self.packed_components.size();
+    }
+    auto operator[](this auto& self, std::size_t i) -> util::raw::Ref {
+        return self.packed_components[i];
     }
     
 
@@ -88,7 +103,7 @@ public:
 
     template <typename C>
     auto add(this EntityManager& self, EntityID entity, auto&&... args) {
-        auto& set = self.stores.at(std::type_index(typeid(C)));
+        auto& set = self.get<C>();
         set.add(entity, [&](std::byte* new_spot) {
             std::construct_at(reinterpret_cast<C*>(new_spot), std::forward<decltype(args)>(args)...);
         });
@@ -100,13 +115,26 @@ public:
         set.remove(entity);
     }
 
-    template <typename C>
-    auto transform(this EntityManager& self, std::invocable<C&> auto f) {
-        auto items = self.stores.at(std::type_index(typeid(C))).query();
-        for (auto item : items) {
-            f(*reinterpret_cast<C*>(item.ptr()));
+    template <typename First, typename... Rest>
+    auto transform(this EntityManager& self, std::invocable<First&, Rest&...> auto f) {
+        auto dense = self.get_store<First>();
+        for (int i = 0; i < dense.size(); i++) {
+            auto entity = dense.entity_at(i);
+            f(*reinterpret_cast<First*>(dense[i].ptr()), self.get<Rest>(entity)...);
+            
         }
     }
 private:
+    template <typename T>
+    auto get(this EntityManager& self, EntityID entity) -> T& {
+        return self.stores.at(std::type_index(typeid(T))).get<T>();
+    };
+
+    template <typename T>
+    auto get_store(this EntityManager& self) -> SparseSet& {
+        return self.stores.at(std::type_index(typeid(T)));
+    }
+
+    
     std::unordered_map<std::type_index, SparseSet> stores;
 };

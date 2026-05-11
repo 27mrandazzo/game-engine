@@ -123,6 +123,12 @@ export namespace util {
         public:
             Ref(std::byte* ptr, std::size_t size) : data(ptr, size) {};
 
+            template <typename T>
+            explicit operator T&(this const auto& self) {
+                assert(sizeof(T) == self.size());
+                return reinterpret_cast<T*>(self.data.ptr());
+            }
+
             auto ptr(this const auto& self) -> std::byte* {
                 return self.data.data();
             }
@@ -176,7 +182,7 @@ export namespace util {
             auto size(this const auto& self) -> std::size_t {
                 return self.bytes.size() / self.stride;
             }
-            auto operator[](this const auto& self, std::size_t idx) -> Ref {
+            auto operator[](this auto& self, std::size_t idx) -> Ref {
                 std::byte* item = self.bytes.data() + (idx * self.stride);
                 return Ref(item, self.stride);
             }
@@ -198,7 +204,7 @@ export namespace util {
     public:
         Vec() : data(sizeof(T)) {};
 
-        auto operator[](this const auto& self, std::size_t idx) -> T& {
+        auto operator[](this auto& self, std::size_t idx) -> T& {
             raw::Ref bytes = self.data[idx];
             return *reinterpret_cast<T*>(bytes.ptr());
         }

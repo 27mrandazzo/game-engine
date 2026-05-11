@@ -1,6 +1,6 @@
 CMakeFiles/cpplab.dir/src/main.cpp.o.ddi: \
   /home/proj/game-engine/src/main.cpp \
-  /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_events.h \
+  /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_error.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_stdinc.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_platform_defines.h \
   /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include/stdarg.h \
@@ -63,6 +63,7 @@ CMakeFiles/cpplab.dir/src/main.cpp.o.ddi: \
   /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include/bits/types/FILE.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_begin_code.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_close_code.h \
+  /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_events.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_audio.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_endian.h \
   /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include/endian.h \
@@ -70,7 +71,6 @@ CMakeFiles/cpplab.dir/src/main.cpp.o.ddi: \
   /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include/bits/endianness.h \
   /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include/bits/byteswap.h \
   /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include/bits/uintn-identity.h \
-  /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_error.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_mutex.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_atomic.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_thread.h \
