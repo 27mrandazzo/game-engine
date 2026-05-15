@@ -56,7 +56,7 @@
             };
           };
             packages.default = mkPkg.cpp-template;           
-            devShells.default = pkgs.mkShell {
+            devShells.default = pkgs.mkShell.override { stdenv = pkgs.llvmPackages_19.libcxxStdenv; } {
               packages = deps.build ++ deps.devel;
               inputsFrom = [ packages.default ];
               

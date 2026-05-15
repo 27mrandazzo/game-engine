@@ -39,9 +39,16 @@ auto main() -> int {
     emgr.register_component<Transform>();
     emgr.register_component<CollisionMesh>();
 
-    emgr.transform<Transform, CollisionMesh>([](auto& t, auto& cm) {
-        
-    });
+    emgr.add<Transform>(EntityID::create(1), 2.0, 3.0);
+
+    for (int i = 0; i < 1000; i++) {
+        emgr.transform<Transform, CollisionMesh>([](auto& t, auto& cm) {
+            t.x += 1.0;
+            t.y -= 1.0;
+            SDL_Log("x: %f y: %f", t.x, t.y);
+        });
+    }
+    
 
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderClear(renderer);

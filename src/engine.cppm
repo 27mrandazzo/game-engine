@@ -14,6 +14,10 @@ export module engine;
 import util;
 
 using util::Array;
+using std::optional;
+
+template <typename T>
+using OptRef = std::optional<std::reference_wrapper<T>>;
 
 #define DEFINE_INDEX_TYPE(Name) \
     struct Name##_T {};         \
@@ -75,8 +79,14 @@ public:
         return self.packed_components.span();
     }
 
-    auto get(this auto& self, EntityID e) -> util::raw::Ref {
-        return self.packed_components.at(e);
+    template<typename T>
+    auto get(this auto& self, EntityID e) -> OptRef {
+        optional<util::raw::Ref> component = self.packed_components.at(e);
+
+        return optional(component).transform([](auto c){ 
+            assert (sizeof(T) == c.size());
+            return *reinterpret_cast<T*>(c.ptr());
+        });
     }
 
     auto size(this const auto& self) -> std::size_t {
@@ -103,7 +113,7 @@ public:
 
     template <typename C>
     auto add(this EntityManager& self, EntityID entity, auto&&... args) {
-        auto& set = self.get<C>();
+        auto& set = self.get_store<C>();
         set.add(entity, [&](std::byte* new_spot) {
             std::construct_at(reinterpret_cast<C*>(new_spot), std::forward<decltype(args)>(args)...);
         });
@@ -121,15 +131,9 @@ public:
         for (int i = 0; i < dense.size(); i++) {
             auto entity = dense.entity_at(i);
             f(*reinterpret_cast<First*>(dense[i].ptr()), self.get<Rest>(entity)...);
-            
         }
     }
 private:
-    template <typename T>
-    auto get(this EntityManager& self, EntityID entity) -> T& {
-        return self.stores.at(std::type_index(typeid(T))).get<T>();
-    };
-
     template <typename T>
     auto get_store(this EntityManager& self) -> SparseSet& {
         return self.stores.at(std::type_index(typeid(T)));

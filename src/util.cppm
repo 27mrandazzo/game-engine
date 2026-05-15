@@ -186,7 +186,7 @@ export namespace util {
                 std::byte* item = self.bytes.data() + (idx * self.stride);
                 return Ref(item, self.stride);
             }
-            auto at(this const auto& self, std::size_t idx) -> std::optional<Ref> {
+            auto at(this auto& self, std::size_t idx) -> std::optional<Ref> {
                 if (idx >= self.size()) return std::nullopt;
                 return self[idx];
             }
