@@ -64,6 +64,7 @@
                 export LD_LIBRARY_PATH=${pkgs.mesa}/lib:${pkgs.libGL}/lib:${pkgs.wayland}/lib:$LD_LIBRARY_PATH
                 export LIBGL_ALWAYS_SOFTWARE=1
                 export __EGL_VENDOR_LIBRARY_DIRS=${pkgs.mesa}/share/glvnd/egl_vendor.d
+                export CLANG_COLOR=1
               '';
             };
           };

@@ -1,9 +1,9 @@
 module;
 
+#include <limits>
 #include <algorithm>
 #include <typeindex>
 #include <unordered_map>
-#include <cstdint>
 #include <cstdlib>
 #include <concepts>
 #include <cassert>
@@ -25,17 +25,15 @@ using OptRef = std::optional<std::reference_wrapper<T>>;
 
 constexpr std::size_t WORLD_SIZE = 1024;
 
+static constexpr std::size_t dense_sentinel = std::numeric_limits<std::size_t>::max();
+
 export class EntityID {
 public:
     static constexpr auto create(std::integral auto n) -> EntityID {
         // PRECONDITION
-        assert(n != SENTINEL);
         assert(n < WORLD_SIZE);
         
         return EntityID(n);
-    }
-    static constexpr auto sentinel() -> EntityID {
-        return EntityID(SENTINEL);
     }
 
     operator std::size_t(this const EntityID& self) {
@@ -46,18 +44,22 @@ public:
 private:
     std::size_t value;
     
-    static const std::size_t SENTINEL = 0;
+    static const std::size_t SENTINEL = std::numeric_limits<std::size_t>::max();
 
     constexpr EntityID(std::integral auto val) : value(val) {};
 };
 
 export class SparseSet {
 public:
-    explicit SparseSet(std::size_t c_size) : packed_components(c_size) {}
+    static auto create(std::size_t c_size) -> SparseSet {
+        auto ss = SparseSet(c_size);
+
+        std::ranges::fill(ss.indicies, dense_sentinel);
+
+        return ss;
+    }
 
     void add(this auto& self, EntityID e, std::invocable<std::byte*> auto cstr) {
-        assert(e != EntityID::sentinel());
-
         self.indicies[e] = self.packed_entities.size();
 
         self.packed_entities.emplace_back(e);
@@ -65,7 +67,7 @@ public:
     }
 
     void remove(this auto& self, EntityID e) {
-        self.indicies.at(e) = EntityID::sentinel();
+        self.indicies.at(e) = dense_sentinel;
         size_t last_idx = self.packed_entities.size() - 1;
         self.packed_entities.pop_swap(last_idx);
         self.packed_components.pop_swap(last_idx);
@@ -80,13 +82,13 @@ public:
     }
 
     template<typename T>
-    auto get(this auto& self, EntityID e) -> OptRef {
-        optional<util::raw::Ref> component = self.packed_components.at(e);
+    auto get(this auto& self, EntityID e) -> OptRef<T> {
+        auto idx = self.indicies[e];
+        if (static_cast<size_t>(e) == dense_sentinel) return std::nullopt;
 
-        return optional(component).transform([](auto c){ 
-            assert (sizeof(T) == c.size());
-            return *reinterpret_cast<T*>(c.ptr());
-        });
+        util::raw::Ref component = self.packed_components[idx];
+        assert(sizeof(T) == component.size());
+        return *reinterpret_cast<T*>(component.ptr());
     }
 
     auto size(this const auto& self) -> std::size_t {
@@ -98,6 +100,8 @@ public:
     
 
 private:
+    SparseSet(std::size_t c_size) : packed_components(c_size) {}
+
     Array<EntityID, std::size_t, WORLD_SIZE> indicies;
     util::Vec<EntityID> packed_entities;
     util::raw::Vec packed_components;
@@ -108,7 +112,7 @@ public:
     template<typename C>
     auto register_component(this EntityManager& self) {
         const auto id = std::type_index(typeid(C));
-        self.stores.emplace(id, SparseSet(sizeof(C)));
+        self.stores.emplace(id, SparseSet::create(sizeof(C)));
     }
 
     template <typename C>
@@ -127,10 +131,17 @@ public:
 
     template <typename First, typename... Rest>
     auto transform(this EntityManager& self, std::invocable<First&, Rest&...> auto f) {
-        auto dense = self.get_store<First>();
+        auto& dense = self.get_store<First>();
+
         for (int i = 0; i < dense.size(); i++) {
+            auto& first = *reinterpret_cast<First*>(dense[i].ptr());
             auto entity = dense.entity_at(i);
-            f(*reinterpret_cast<First*>(dense[i].ptr()), self.get<Rest>(entity)...);
+            std::tuple<OptRef<Rest>...> rest = std::tuple(self.get_store<Rest>().template get<Rest>(entity)...);
+            
+            std::apply([&](OptRef<Rest>&... c) {
+                if ((c.has_value() && ...))
+                    f(first, c->get()...);
+            }, rest);
         }
     }
 private:

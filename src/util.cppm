@@ -16,6 +16,9 @@ export module util;
     using Name = util::Index<Name##_T>
 
 export namespace util {
+    template<class... Ts>
+    struct overloads : Ts... { using Ts::operator()...; };
+
     template <typename Tag>
     struct Index {
         std::size_t value;
