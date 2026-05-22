@@ -222,6 +222,9 @@ PROJECT_VERSION:STRING=
 //The directory containing a CMake configuration file for SDL3.
 SDL3_DIR:PATH=/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3
 
+//The directory containing a CMake configuration file for SDL3_ttf.
+SDL3_ttf_DIR:PATH=/nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf
+
 
 ########################
 # INTERNAL cache entries

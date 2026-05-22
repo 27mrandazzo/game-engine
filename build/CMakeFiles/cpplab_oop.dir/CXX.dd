@@ -1,0 +1,3 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o: dyndep | CMakeFiles/game_modules.dir/util.pcm
+

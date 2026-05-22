@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:17 (project)"
     message: |
       The system is: Linux - 6.15.2 - x86_64
   -
@@ -14,7 +14,7 @@ events:
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:17 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++ 
@@ -35,12 +35,12 @@ events:
     backtrace:
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:17 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-zKojLt"
-      binary: "/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-zKojLt"
+      source: "/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-VoBhiJ"
+      binary: "/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-VoBhiJ"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "/nix/store/06gf7f983rjm28pmycy732hdj4i7x0v8-clang-tools-19.1.7/bin/clang-scan-deps"
       CMAKE_CXX_FLAGS: ""
@@ -51,10 +51,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-zKojLt'
+        Change Dir: '/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-VoBhiJ'
         
-        Run Build Command(s): /nix/store/93p8lzm2pajznwjanciiq3zggqndykyy-ninja-1.12.1/bin/ninja -v cmTC_620be
-        [1/2] /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++   -v -MD -MT CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -c /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /nix/store/93p8lzm2pajznwjanciiq3zggqndykyy-ninja-1.12.1/bin/ninja -v cmTC_c84a5
+        [1/2] /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++   -v -MD -MT CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -c /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
         clang version 19.1.7
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -64,19 +64,29 @@ events:
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
          (in-process)
-         "/nix/store/zmk3gqm6sxgar8b84sz66wbs7kx4v2gi-clang-19.1.7/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-zKojLt -v -fcoverage-compilation-dir=/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-zKojLt -nostdsysteminc -resource-dir /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root -dependency-file CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -idirafter /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -U _FORTIFY_SOURCE -U _FORTIFY_SOURCE -D _FORTIFY_SOURCE=2 -internal-isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -source-date-epoch 315532800 -O2 -Wformat -Wformat-security -Werror=format-security -fdeprecated-macro -ferror-limit 19 -fzero-call-used-regs=used-gpr -fwrapv -stack-protector 2 -stack-protector-buffer-size 4 -fstack-clash-protection -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -x c++ /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+         "/nix/store/zmk3gqm6sxgar8b84sz66wbs7kx4v2gi-clang-19.1.7/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-VoBhiJ -v -fcoverage-compilation-dir=/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-VoBhiJ -nostdsysteminc -resource-dir /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root -dependency-file CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -idirafter /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -U _FORTIFY_SOURCE -U _FORTIFY_SOURCE -D _FORTIFY_SOURCE=2 -internal-isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -source-date-epoch 315532800 -O2 -Wformat -Wformat-security -Werror=format-security -fdeprecated-macro -ferror-limit 19 -fzero-call-used-regs=used-gpr -fwrapv -stack-protector 2 -stack-protector-buffer-size 4 -fstack-clash-protection -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -x c++ /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 19.1.7 based upon LLVM 19.1.7 default target x86_64-unknown-linux-gnu
         ignoring duplicate directory "/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include"
         ignoring duplicate directory "/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include"
+        ignoring duplicate directory "/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include"
+        ignoring duplicate directory "/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include"
+        ignoring duplicate directory "/nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include"
+        ignoring duplicate directory "/nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include"
+        ignoring duplicate directory "/nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include"
         #include "..." search starts here:
         #include <...> search starts here:
          /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include
          /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include
+         /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include
+         /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include
+         /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include
+         /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include
+         /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include
          /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1
          /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include
          /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
         End of search list.
-        [2/2] : && /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++  -v -Wl,-v CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_620be   && :
+        [2/2] : && /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++  -v -Wl,-v CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c84a5   && :
         clang version 19.1.7
         Target: x86_64-unknown-linux-gnu
         Thread model: posix
@@ -85,7 +95,7 @@ events:
         Selected GCC installation: /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1
         Candidate multilib: .;@m64
         Selected multilib: .;@m64
-         "/nix/store/dyqmjp3wzcxrwlqhzlzvlw12jir1snlh-binutils-wrapper-2.44/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_620be /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/Scrt1.o /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crti.o /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtbeginS.o -L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib -L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib -L/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib -L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322//lib -L/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib -L/nix/store/4xqa6mk1lllnsprl2swlw94vczzn02y9-clang-19.1.7-lib/lib -L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1 -L/lib -L/usr/lib -dynamic-linker=/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -rpath /home/proj/game-engine/outputs/out/lib -lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtendS.o /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crtn.o
+         "/nix/store/dyqmjp3wzcxrwlqhzlzvlw12jir1snlh-binutils-wrapper-2.44/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_c84a5 /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/Scrt1.o /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crti.o /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtbeginS.o -L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib -L/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib -L/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib -L/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib -L/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib -L/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib -L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib -L/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib -L/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib -L/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib -L/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib -L/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib -L/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib -L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322//lib -L/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib -L/nix/store/4xqa6mk1lllnsprl2swlw94vczzn02y9-clang-19.1.7-lib/lib -L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1 -L/lib -L/usr/lib -dynamic-linker=/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -rpath /home/proj/game-engine/outputs/out/lib -lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtendS.o /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crtn.o
         GNU ld (GNU Binutils) 2.44
         
       exitCode: 0
@@ -94,23 +104,33 @@ events:
     backtrace:
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:17 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
           add: [/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include]
           add: [/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include]
+          add: [/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include]
+          add: [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include]
+          add: [/nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include]
+          add: [/nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include]
+          add: [/nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include]
           add: [/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1]
           add: [/nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include]
           add: [/nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include]
         end of search list found
         collapse include dir [/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include] ==> [/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include]
         collapse include dir [/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include] ==> [/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include]
+        collapse include dir [/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include] ==> [/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include]
+        collapse include dir [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include] ==> [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include]
+        collapse include dir [/nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include] ==> [/nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include]
+        collapse include dir [/nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include] ==> [/nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include]
+        collapse include dir [/nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include] ==> [/nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include]
         collapse include dir [/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1] ==> [/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1]
         collapse include dir [/nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include] ==> [/nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include]
         collapse include dir [/nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include] ==> [/nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include]
-        implicit include dirs: [/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include;/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include;/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1;/nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include;/nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include]
+        implicit include dirs: [/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include;/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include;/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include;/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include;/nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include;/nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include;/nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include;/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1;/nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include;/nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include]
       
       
   -
@@ -118,15 +138,15 @@ events:
     backtrace:
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:17 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-zKojLt']
+        ignore line: [Change Dir: '/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-VoBhiJ']
         ignore line: []
-        ignore line: [Run Build Command(s): /nix/store/93p8lzm2pajznwjanciiq3zggqndykyy-ninja-1.12.1/bin/ninja -v cmTC_620be]
-        ignore line: [[1/2] /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++   -v -MD -MT CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -c /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /nix/store/93p8lzm2pajznwjanciiq3zggqndykyy-ninja-1.12.1/bin/ninja -v cmTC_c84a5]
+        ignore line: [[1/2] /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++   -v -MD -MT CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -c /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang version 19.1.7]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -138,19 +158,29 @@ events:
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
         ignore line: [ (in-process)]
-        ignore line: [ "/nix/store/zmk3gqm6sxgar8b84sz66wbs7kx4v2gi-clang-19.1.7/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-zKojLt -v -fcoverage-compilation-dir=/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-zKojLt -nostdsysteminc -resource-dir /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root -dependency-file CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -idirafter /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -U _FORTIFY_SOURCE -U _FORTIFY_SOURCE -D _FORTIFY_SOURCE=2 -internal-isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -source-date-epoch 315532800 -O2 -Wformat -Wformat-security -Werror=format-security -fdeprecated-macro -ferror-limit 19 -fzero-call-used-regs=used-gpr -fwrapv -stack-protector 2 -stack-protector-buffer-size 4 -fstack-clash-protection -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -x c++ /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/nix/store/zmk3gqm6sxgar8b84sz66wbs7kx4v2gi-clang-19.1.7/bin/clang++" -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -fhalf-no-semantic-interposition -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-VoBhiJ -v -fcoverage-compilation-dir=/home/proj/game-engine/build/CMakeFiles/CMakeScratch/TryCompile-VoBhiJ -nostdsysteminc -resource-dir /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root -dependency-file CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -idirafter /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -U _FORTIFY_SOURCE -U _FORTIFY_SOURCE -D _FORTIFY_SOURCE=2 -internal-isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -source-date-epoch 315532800 -O2 -Wformat -Wformat-security -Werror=format-security -fdeprecated-macro -ferror-limit 19 -fzero-call-used-regs=used-gpr -fwrapv -stack-protector 2 -stack-protector-buffer-size 4 -fstack-clash-protection -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -x c++ /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 19.1.7 based upon LLVM 19.1.7 default target x86_64-unknown-linux-gnu]
         ignore line: [ignoring duplicate directory "/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include"]
         ignore line: [ignoring duplicate directory "/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
         ignore line: [ /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include]
         ignore line: [ /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include]
+        ignore line: [ /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include]
+        ignore line: [ /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include]
+        ignore line: [ /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include]
+        ignore line: [ /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include]
+        ignore line: [ /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include]
         ignore line: [ /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1]
         ignore line: [ /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include]
         ignore line: [ /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include]
         ignore line: [End of search list.]
-        ignore line: [[2/2] : && /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++  -v -Wl -v CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_620be   && :]
+        ignore line: [[2/2] : && /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/bin/clang++  -v -Wl -v CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_c84a5   && :]
         ignore line: [clang version 19.1.7]
         ignore line: [Target: x86_64-unknown-linux-gnu]
         ignore line: [Thread model: posix]
@@ -161,7 +191,7 @@ events:
         ignore line: [@m64]
         ignore line: [Selected multilib: .]
         ignore line: [@m64]
-        link line: [ "/nix/store/dyqmjp3wzcxrwlqhzlzvlw12jir1snlh-binutils-wrapper-2.44/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_620be /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/Scrt1.o /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crti.o /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtbeginS.o -L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib -L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib -L/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib -L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322//lib -L/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib -L/nix/store/4xqa6mk1lllnsprl2swlw94vczzn02y9-clang-19.1.7-lib/lib -L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1 -L/lib -L/usr/lib -dynamic-linker=/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o -rpath /home/proj/game-engine/outputs/out/lib -lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtendS.o /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crtn.o]
+        link line: [ "/nix/store/dyqmjp3wzcxrwlqhzlzvlw12jir1snlh-binutils-wrapper-2.44/bin/ld" --hash-style=gnu --eh-frame-hdr -m elf_x86_64 -pie -o cmTC_c84a5 /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/Scrt1.o /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crti.o /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtbeginS.o -L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib -L/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib -L/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib -L/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib -L/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib -L/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib -L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib -L/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib -L/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib -L/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib -L/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib -L/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib -L/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib -L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322//lib -L/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib -L/nix/store/4xqa6mk1lllnsprl2swlw94vczzn02y9-clang-19.1.7-lib/lib -L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1 -L/lib -L/usr/lib -dynamic-linker=/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/ld-linux-x86-64.so.2 -v CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o -rpath /home/proj/game-engine/outputs/out/lib -lc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtendS.o /nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crtn.o]
           arg [/nix/store/dyqmjp3wzcxrwlqhzlzvlw12jir1snlh-binutils-wrapper-2.44/bin/ld] ==> ignore
           arg [--hash-style=gnu] ==> ignore
           arg [--eh-frame-hdr] ==> ignore
@@ -169,12 +199,22 @@ events:
           arg [elf_x86_64] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_620be] ==> ignore
+          arg [cmTC_c84a5] ==> ignore
           arg [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/Scrt1.o] ==> obj [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/Scrt1.o]
           arg [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crti.o] ==> obj [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crti.o]
           arg [/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtbeginS.o] ==> obj [/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtbeginS.o]
           arg [-L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib] ==> dir [/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib]
+          arg [-L/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib] ==> dir [/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib]
+          arg [-L/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib] ==> dir [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib]
+          arg [-L/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib] ==> dir [/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib]
+          arg [-L/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib] ==> dir [/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib]
+          arg [-L/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib] ==> dir [/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib]
           arg [-L/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib] ==> dir [/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib]
+          arg [-L/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib] ==> dir [/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib]
+          arg [-L/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib] ==> dir [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib]
+          arg [-L/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib] ==> dir [/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib]
+          arg [-L/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib] ==> dir [/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib]
+          arg [-L/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib] ==> dir [/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib]
           arg [-L/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib] ==> dir [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib]
           arg [-L/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322//lib] ==> dir [/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322//lib]
           arg [-L/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib] ==> dir [/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib]
@@ -184,7 +224,7 @@ events:
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-dynamic-linker=/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/ld-linux-x86-64.so.2] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_620be.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_c84a5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-rpath] ==> ignore
           arg [/home/proj/game-engine/outputs/out/lib] ==> ignore
           arg [-lc++] ==> lib [c++]
@@ -198,7 +238,17 @@ events:
           arg [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crtn.o] ==> obj [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crtn.o]
         linker tool for 'CXX': /nix/store/dyqmjp3wzcxrwlqhzlzvlw12jir1snlh-binutils-wrapper-2.44/bin/ld
         collapse library dir [/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib] ==> [/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib]
+        collapse library dir [/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib] ==> [/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib]
+        collapse library dir [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib] ==> [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib]
+        collapse library dir [/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib] ==> [/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib]
+        collapse library dir [/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib] ==> [/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib]
+        collapse library dir [/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib] ==> [/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib]
         collapse library dir [/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib] ==> [/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib]
+        collapse library dir [/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib] ==> [/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib]
+        collapse library dir [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib] ==> [/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib]
+        collapse library dir [/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib] ==> [/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib]
+        collapse library dir [/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib] ==> [/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib]
+        collapse library dir [/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib] ==> [/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib]
         collapse library dir [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib] ==> [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib]
         collapse library dir [/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322//lib] ==> [/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib]
         collapse library dir [/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib] ==> [/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib]
@@ -208,7 +258,7 @@ events:
         collapse library dir [/usr/lib] ==> [/usr/lib]
         implicit libs: [c++;m;gcc_s;gcc;c;gcc_s;gcc]
         implicit objs: [/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/Scrt1.o;/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crti.o;/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtbeginS.o;/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1/crtendS.o;/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib/crtn.o]
-        implicit dirs: [/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib;/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib;/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib;/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib;/nix/store/4xqa6mk1lllnsprl2swlw94vczzn02y9-clang-19.1.7-lib/lib;/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1;/lib;/usr/lib]
+        implicit dirs: [/nix/store/0vzwclmj688q6mzxanmf468x8d6w7xj5-libcxx-19.1.7/lib;/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib;/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/lib;/nix/store/z88avybj8n2svi9wv1hl937k2k3mbc2d-libglvnd-1.7.0/lib;/nix/store/mxyi7nahmxs41d2xnyfx9kvanqh3p706-wayland-1.23.1/lib;/nix/store/4di7f8w515xl6grwv13pk6855awav0b1-libxkbcommon-1.8.1/lib;/nix/store/cg9s562sa33k78m63njfn1rw47dp9z0i-glibc-2.40-66/lib;/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib;/nix/store/6hqzbvz50bm87hcj4qfn51gh7arxj8a6-gcc-14.2.1.20250322-libgcc/lib;/nix/store/4xqa6mk1lllnsprl2swlw94vczzn02y9-clang-19.1.7-lib/lib;/nix/store/9ds850ifd4jwcccpp3v14818kk74ldf2-gcc-14.2.1.20250322/lib/gcc/x86_64-unknown-linux-gnu/14.2.1;/lib;/usr/lib]
         implicit fwks: []
       
       
@@ -218,7 +268,7 @@ events:
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
       - "/nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:17 (project)"
     message: |
       Running the CXX compiler's linker: "/nix/store/dyqmjp3wzcxrwlqhzlzvlw12jir1snlh-binutils-wrapper-2.44/bin/ld" "-v"
       GNU ld (GNU Binutils) 2.44

@@ -1,0 +1,65 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "Clang",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : 
+	{
+		"CMakeFiles/game_modules.dir/src/dag.cppm.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "cxx_modules",
+			"relative-directory" : "src",
+			"source" : "/home/proj/game-engine/src/dag.cppm",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/game_modules.dir/src/engine.cppm.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "cxx_modules",
+			"relative-directory" : "src",
+			"source" : "/home/proj/game-engine/src/engine.cppm",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/game_modules.dir/src/util.cppm.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "cxx_modules",
+			"relative-directory" : "src",
+			"source" : "/home/proj/game-engine/src/util.cppm",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		}
+	},
+	"database-info" : null,
+	"dir-cur-bld" : "/home/proj/game-engine/build",
+	"dir-cur-src" : "/home/proj/game-engine",
+	"dir-top-bld" : "/home/proj/game-engine/build",
+	"dir-top-src" : "/home/proj/game-engine",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include",
+		"/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include",
+		"/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include",
+		"/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include",
+		"/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include",
+		"/nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include",
+		"/nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include",
+		"/nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include",
+		"/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1",
+		"/nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include",
+		"/nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/proj/game-engine/build/CMakeFiles/game_modules.dir",
+	"sources" : {}
+}

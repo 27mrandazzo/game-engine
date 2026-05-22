@@ -539,4 +539,6 @@ CMakeFiles/cpplab.dir/src/util.cppm.o.ddi: \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/span \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/__fwd/span.h \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/concepts \
-  /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/__concepts/common_with.h
+  /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/__concepts/common_with.h \
+  /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/cassert \
+  /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include/assert.h

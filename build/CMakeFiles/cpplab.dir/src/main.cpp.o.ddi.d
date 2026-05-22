@@ -122,6 +122,7 @@ CMakeFiles/cpplab.dir/src/main.cpp.o.ddi: \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_tray.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_version.h \
   /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include/SDL3/SDL_oldnames.h \
+  /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include/SDL3_ttf/SDL_ttf.h \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/cassert \
   /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include/assert.h \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/chrono \
@@ -666,6 +667,8 @@ CMakeFiles/cpplab.dir/src/main.cpp.o.ddi: \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/__chrono/time_zone_link.h \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/__chrono/tzdb.h \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/__chrono/tzdb_list.h \
+  /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/concepts \
+  /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/__concepts/common_with.h \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/print \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/format \
   /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1/__format/container_adaptor.h \

@@ -1,4 +1,6 @@
-/home/proj/game-engine/build/CMakeFiles/cpplab.dir
+/home/proj/game-engine/build/CMakeFiles/game_modules.dir
+/home/proj/game-engine/build/CMakeFiles/cpplab_ecs.dir
+/home/proj/game-engine/build/CMakeFiles/cpplab_oop.dir
 /home/proj/game-engine/build/CMakeFiles/edit_cache.dir
 /home/proj/game-engine/build/CMakeFiles/rebuild_cache.dir
 /home/proj/game-engine/build/CMakeFiles/list_install_components.dir

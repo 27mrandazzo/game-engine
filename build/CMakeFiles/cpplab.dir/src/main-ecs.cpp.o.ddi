@@ -1,0 +1,17 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/cpplab.dir/src/main-ecs.cpp.o",
+      "requires": [
+        {
+          "logical-name": "engine"
+        },
+        {
+          "logical-name": "util"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

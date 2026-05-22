@@ -1,0 +1,14 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o",
+      "requires": [
+        {
+          "logical-name": "util"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

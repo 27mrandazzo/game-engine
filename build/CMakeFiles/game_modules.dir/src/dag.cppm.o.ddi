@@ -1,0 +1,16 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/game_modules.dir/src/dag.cppm.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "dag",
+          "source-path": "/home/proj/game-engine/src/dag.cppm"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

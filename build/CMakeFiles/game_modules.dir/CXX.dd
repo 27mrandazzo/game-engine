@@ -1,0 +1,10 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/game_modules.dir/src/engine.cppm.o | CMakeFiles/game_modules.dir/engine.pcm: dyndep | CMakeFiles/game_modules.dir/util.pcm
+  restat = 1
+
+build CMakeFiles/game_modules.dir/src/util.cppm.o | CMakeFiles/game_modules.dir/util.pcm: dyndep
+  restat = 1
+
+build CMakeFiles/game_modules.dir/src/dag.cppm.o | CMakeFiles/game_modules.dir/dag.pcm: dyndep
+  restat = 1
+

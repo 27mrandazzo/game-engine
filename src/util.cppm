@@ -8,6 +8,7 @@ module;
 #include <span>
 #include <cstddef>
 #include <concepts>
+#include <cassert>
 
 export module util;
 
@@ -129,7 +130,7 @@ export namespace util {
             template <typename T>
             explicit operator T&(this const auto& self) {
                 assert(sizeof(T) == self.size());
-                return reinterpret_cast<T*>(self.data.ptr());
+                return *reinterpret_cast<T*>(self.data.data());
             }
 
             auto ptr(this const auto& self) -> std::byte* {

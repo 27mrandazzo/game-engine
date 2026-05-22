@@ -26,10 +26,13 @@
             };
             deps = {
               runtime = with pkgs; [ 
+                pkgs.sdl3
                 pkgs.mesa
                 pkgs.libGL
                 pkgs.wayland
                 pkgs.libxkbcommon
+                pkgs.sdl3-ttf
+                pkgs.dejavu_fonts
                ];
               build = with pkgs; [ cmake ninja pkg-config ];
               devel = with pkgs; [ clang-tools ];
@@ -65,6 +68,7 @@
                 export LIBGL_ALWAYS_SOFTWARE=1
                 export __EGL_VENDOR_LIBRARY_DIRS=${pkgs.mesa}/share/glvnd/egl_vendor.d
                 export CLANG_COLOR=1
+                export FONT_PATH=${pkgs.dejavu_fonts}/share/fonts/truetype/DejaVuSans.ttf
               '';
             };
           };

@@ -1,0 +1,193 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "libgame_modules.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_compile_options",
+			"target_link_libraries",
+			"target_compile_features",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 30,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=c++26 -fcolor-diagnostics"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-stdlib=libstdc++"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include"
+				},
+				{
+					"isSystem" : true,
+					"path" : "/nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					4
+				],
+				"standard" : "26"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"fileSets" : 
+	[
+		{
+			"baseDirectories" : 
+			[
+				"."
+			],
+			"name" : "cxx_modules",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		}
+	],
+	"id" : "game_modules::@6890427a1f51a3e7e1df",
+	"name" : "game_modules",
+	"nameOnDisk" : "libgame_modules.a",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/engine.cppm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/util.cppm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"compileGroupIndex" : 0,
+			"path" : "src/dag.cppm",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

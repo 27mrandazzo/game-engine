@@ -41,102 +41,176 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/proj/game-engine/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target cpplab
+# Object build statements for STATIC_LIBRARY target game_modules
 
 
 #############################################
-# Order-only phony target for cpplab
+# Order-only phony target for game_modules
 
-build cmake_object_order_depends_target_cpplab: phony || .
+build cmake_object_order_depends_target_game_modules: phony || .
 
-build CMakeFiles/cpplab.dir/src/main.cpp.o.ddi: CXX_SCAN__cpplab_Debug /home/proj/game-engine/src/main.cpp || cmake_object_order_depends_target_cpplab
-  DEP_FILE = CMakeFiles/cpplab.dir/src/main.cpp.o.ddi.d
-  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/cpplab.dir/src/main.cpp.o.ddi
-  FLAGS = -g -std=c++26 -fcolor-diagnostics
-  INCLUDES = -I/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
-  OBJ_FILE = CMakeFiles/cpplab.dir/src/main.cpp.o
-  PREPROCESSED_OUTPUT_FILE = CMakeFiles/cpplab.dir/src/main.cpp.o.ddi.i
+build CMakeFiles/game_modules.dir/src/engine.cppm.o.ddi: CXX_SCAN__game_modules_Debug /home/proj/game-engine/src/engine.cppm || cmake_object_order_depends_target_game_modules
+  DEP_FILE = CMakeFiles/game_modules.dir/src/engine.cppm.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/game_modules.dir/src/engine.cppm.o.ddi
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJ_FILE = CMakeFiles/game_modules.dir/src/engine.cppm.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/game_modules.dir/src/engine.cppm.o.ddi.i
 
-build CMakeFiles/cpplab.dir/src/main.cpp.o: CXX_COMPILER__cpplab_scanned_Debug /home/proj/game-engine/src/main.cpp | CMakeFiles/cpplab.dir/src/main.cpp.o.modmap || cmake_object_order_depends_target_cpplab CMakeFiles/cpplab.dir/CXX.dd
-  DEP_FILE = CMakeFiles/cpplab.dir/src/main.cpp.o.d
-  DYNDEP_MODULE_MAP_FILE = CMakeFiles/cpplab.dir/src/main.cpp.o.modmap
-  FLAGS = -g -std=c++26 -fcolor-diagnostics
-  INCLUDES = -I/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
-  OBJECT_DIR = CMakeFiles/cpplab.dir
-  OBJECT_FILE_DIR = CMakeFiles/cpplab.dir/src
-  dyndep = CMakeFiles/cpplab.dir/CXX.dd
+build CMakeFiles/game_modules.dir/src/engine.cppm.o: CXX_COMPILER__game_modules_scanned_Debug /home/proj/game-engine/src/engine.cppm | CMakeFiles/game_modules.dir/src/engine.cppm.o.modmap || cmake_object_order_depends_target_game_modules CMakeFiles/game_modules.dir/CXX.dd
+  DEP_FILE = CMakeFiles/game_modules.dir/src/engine.cppm.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/game_modules.dir/src/engine.cppm.o.modmap
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJECT_DIR = CMakeFiles/game_modules.dir
+  OBJECT_FILE_DIR = CMakeFiles/game_modules.dir/src
+  dyndep = CMakeFiles/game_modules.dir/CXX.dd
 
-build CMakeFiles/cpplab.dir/src/engine.cppm.o.ddi: CXX_SCAN__cpplab_Debug /home/proj/game-engine/src/engine.cppm || cmake_object_order_depends_target_cpplab
-  DEP_FILE = CMakeFiles/cpplab.dir/src/engine.cppm.o.ddi.d
-  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/cpplab.dir/src/engine.cppm.o.ddi
-  FLAGS = -g -std=c++26 -fcolor-diagnostics
-  INCLUDES = -I/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
-  OBJ_FILE = CMakeFiles/cpplab.dir/src/engine.cppm.o
-  PREPROCESSED_OUTPUT_FILE = CMakeFiles/cpplab.dir/src/engine.cppm.o.ddi.i
+build CMakeFiles/game_modules.dir/src/util.cppm.o.ddi: CXX_SCAN__game_modules_Debug /home/proj/game-engine/src/util.cppm || cmake_object_order_depends_target_game_modules
+  DEP_FILE = CMakeFiles/game_modules.dir/src/util.cppm.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/game_modules.dir/src/util.cppm.o.ddi
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJ_FILE = CMakeFiles/game_modules.dir/src/util.cppm.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/game_modules.dir/src/util.cppm.o.ddi.i
 
-build CMakeFiles/cpplab.dir/src/engine.cppm.o: CXX_COMPILER__cpplab_scanned_Debug /home/proj/game-engine/src/engine.cppm | CMakeFiles/cpplab.dir/src/engine.cppm.o.modmap || cmake_object_order_depends_target_cpplab CMakeFiles/cpplab.dir/CXX.dd
-  DEP_FILE = CMakeFiles/cpplab.dir/src/engine.cppm.o.d
-  DYNDEP_MODULE_MAP_FILE = CMakeFiles/cpplab.dir/src/engine.cppm.o.modmap
-  FLAGS = -g -std=c++26 -fcolor-diagnostics
-  INCLUDES = -I/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
-  OBJECT_DIR = CMakeFiles/cpplab.dir
-  OBJECT_FILE_DIR = CMakeFiles/cpplab.dir/src
-  dyndep = CMakeFiles/cpplab.dir/CXX.dd
+build CMakeFiles/game_modules.dir/src/util.cppm.o: CXX_COMPILER__game_modules_scanned_Debug /home/proj/game-engine/src/util.cppm | CMakeFiles/game_modules.dir/src/util.cppm.o.modmap || cmake_object_order_depends_target_game_modules CMakeFiles/game_modules.dir/CXX.dd
+  DEP_FILE = CMakeFiles/game_modules.dir/src/util.cppm.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/game_modules.dir/src/util.cppm.o.modmap
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJECT_DIR = CMakeFiles/game_modules.dir
+  OBJECT_FILE_DIR = CMakeFiles/game_modules.dir/src
+  dyndep = CMakeFiles/game_modules.dir/CXX.dd
 
-build CMakeFiles/cpplab.dir/src/util.cppm.o.ddi: CXX_SCAN__cpplab_Debug /home/proj/game-engine/src/util.cppm || cmake_object_order_depends_target_cpplab
-  DEP_FILE = CMakeFiles/cpplab.dir/src/util.cppm.o.ddi.d
-  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/cpplab.dir/src/util.cppm.o.ddi
-  FLAGS = -g -std=c++26 -fcolor-diagnostics
-  INCLUDES = -I/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
-  OBJ_FILE = CMakeFiles/cpplab.dir/src/util.cppm.o
-  PREPROCESSED_OUTPUT_FILE = CMakeFiles/cpplab.dir/src/util.cppm.o.ddi.i
+build CMakeFiles/game_modules.dir/src/dag.cppm.o.ddi: CXX_SCAN__game_modules_Debug /home/proj/game-engine/src/dag.cppm || cmake_object_order_depends_target_game_modules
+  DEP_FILE = CMakeFiles/game_modules.dir/src/dag.cppm.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/game_modules.dir/src/dag.cppm.o.ddi
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJ_FILE = CMakeFiles/game_modules.dir/src/dag.cppm.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/game_modules.dir/src/dag.cppm.o.ddi.i
 
-build CMakeFiles/cpplab.dir/src/util.cppm.o: CXX_COMPILER__cpplab_scanned_Debug /home/proj/game-engine/src/util.cppm | CMakeFiles/cpplab.dir/src/util.cppm.o.modmap || cmake_object_order_depends_target_cpplab CMakeFiles/cpplab.dir/CXX.dd
-  DEP_FILE = CMakeFiles/cpplab.dir/src/util.cppm.o.d
-  DYNDEP_MODULE_MAP_FILE = CMakeFiles/cpplab.dir/src/util.cppm.o.modmap
-  FLAGS = -g -std=c++26 -fcolor-diagnostics
-  INCLUDES = -I/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
-  OBJECT_DIR = CMakeFiles/cpplab.dir
-  OBJECT_FILE_DIR = CMakeFiles/cpplab.dir/src
-  dyndep = CMakeFiles/cpplab.dir/CXX.dd
+build CMakeFiles/game_modules.dir/src/dag.cppm.o: CXX_COMPILER__game_modules_scanned_Debug /home/proj/game-engine/src/dag.cppm | CMakeFiles/game_modules.dir/src/dag.cppm.o.modmap || cmake_object_order_depends_target_game_modules CMakeFiles/game_modules.dir/CXX.dd
+  DEP_FILE = CMakeFiles/game_modules.dir/src/dag.cppm.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/game_modules.dir/src/dag.cppm.o.modmap
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJECT_DIR = CMakeFiles/game_modules.dir
+  OBJECT_FILE_DIR = CMakeFiles/game_modules.dir/src
+  dyndep = CMakeFiles/game_modules.dir/CXX.dd
 
-build CMakeFiles/cpplab.dir/src/dag.cppm.o.ddi: CXX_SCAN__cpplab_Debug /home/proj/game-engine/src/dag.cppm || cmake_object_order_depends_target_cpplab
-  DEP_FILE = CMakeFiles/cpplab.dir/src/dag.cppm.o.ddi.d
-  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/cpplab.dir/src/dag.cppm.o.ddi
-  FLAGS = -g -std=c++26 -fcolor-diagnostics
-  INCLUDES = -I/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
-  OBJ_FILE = CMakeFiles/cpplab.dir/src/dag.cppm.o
-  PREPROCESSED_OUTPUT_FILE = CMakeFiles/cpplab.dir/src/dag.cppm.o.ddi.i
-
-build CMakeFiles/cpplab.dir/src/dag.cppm.o: CXX_COMPILER__cpplab_scanned_Debug /home/proj/game-engine/src/dag.cppm | CMakeFiles/cpplab.dir/src/dag.cppm.o.modmap || cmake_object_order_depends_target_cpplab CMakeFiles/cpplab.dir/CXX.dd
-  DEP_FILE = CMakeFiles/cpplab.dir/src/dag.cppm.o.d
-  DYNDEP_MODULE_MAP_FILE = CMakeFiles/cpplab.dir/src/dag.cppm.o.modmap
-  FLAGS = -g -std=c++26 -fcolor-diagnostics
-  INCLUDES = -I/nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
-  OBJECT_DIR = CMakeFiles/cpplab.dir
-  OBJECT_FILE_DIR = CMakeFiles/cpplab.dir/src
-  dyndep = CMakeFiles/cpplab.dir/CXX.dd
-
-build CMakeFiles/cpplab.dir/CXX.dd | /home/proj/game-engine/build/CMakeFiles/cpplab.dir/CXXModules.json CMakeFiles/cpplab.dir/src/main.cpp.o.modmap CMakeFiles/cpplab.dir/src/engine.cppm.o.modmap CMakeFiles/cpplab.dir/src/util.cppm.o.modmap CMakeFiles/cpplab.dir/src/dag.cppm.o.modmap: CXX_DYNDEP__cpplab_Debug CMakeFiles/cpplab.dir/src/main.cpp.o.ddi CMakeFiles/cpplab.dir/src/engine.cppm.o.ddi CMakeFiles/cpplab.dir/src/util.cppm.o.ddi CMakeFiles/cpplab.dir/src/dag.cppm.o.ddi | /home/proj/game-engine/build/CMakeFiles/cpplab.dir/CXXDependInfo.json
+build CMakeFiles/game_modules.dir/CXX.dd | /home/proj/game-engine/build/CMakeFiles/game_modules.dir/CXXModules.json CMakeFiles/game_modules.dir/src/engine.cppm.o.modmap CMakeFiles/game_modules.dir/src/util.cppm.o.modmap CMakeFiles/game_modules.dir/src/dag.cppm.o.modmap: CXX_DYNDEP__game_modules_Debug CMakeFiles/game_modules.dir/src/engine.cppm.o.ddi CMakeFiles/game_modules.dir/src/util.cppm.o.ddi CMakeFiles/game_modules.dir/src/dag.cppm.o.ddi | /home/proj/game-engine/build/CMakeFiles/game_modules.dir/CXXDependInfo.json
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target cpplab
+# Link build statements for STATIC_LIBRARY target game_modules
 
 
 #############################################
-# Link the executable cpplab
+# Link the static library libgame_modules.a
 
-build cpplab: CXX_EXECUTABLE_LINKER__cpplab_Debug CMakeFiles/cpplab.dir/src/main.cpp.o CMakeFiles/cpplab.dir/src/engine.cppm.o CMakeFiles/cpplab.dir/src/util.cppm.o CMakeFiles/cpplab.dir/src/dag.cppm.o | /nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib/libSDL3.so.0.2.12
-  DEP_FILE = CMakeFiles/cpplab.dir/link.d
-  FLAGS = -g
-  LINK_FLAGS = -Xlinker --dependency-file=CMakeFiles/cpplab.dir/link.d
-  LINK_LIBRARIES = -Wl,-rpath,/nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib:  /nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib/libSDL3.so.0.2.12
-  OBJECT_DIR = CMakeFiles/cpplab.dir
+build libgame_modules.a: CXX_STATIC_LIBRARY_LINKER__game_modules_Debug CMakeFiles/game_modules.dir/src/engine.cppm.o CMakeFiles/game_modules.dir/src/util.cppm.o CMakeFiles/game_modules.dir/src/dag.cppm.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/game_modules.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = cpplab
-  TARGET_PDB = cpplab.dbg
+  TARGET_FILE = libgame_modules.a
+  TARGET_PDB = game_modules.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target cpplab_ecs
+
+
+#############################################
+# Order-only phony target for cpplab_ecs
+
+build cmake_object_order_depends_target_cpplab_ecs: phony || cmake_object_order_depends_target_game_modules
+
+build CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.ddi: CXX_SCAN__cpplab_ecs_Debug /home/proj/game-engine/src/main-ecs.cpp || cmake_object_order_depends_target_cpplab_ecs
+  DEP_FILE = CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.ddi
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJ_FILE = CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.ddi.i
+
+build CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o: CXX_COMPILER__cpplab_ecs_scanned_Debug /home/proj/game-engine/src/main-ecs.cpp | CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.modmap || cmake_object_order_depends_target_cpplab_ecs CMakeFiles/cpplab_ecs.dir/CXX.dd
+  DEP_FILE = CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.modmap
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJECT_DIR = CMakeFiles/cpplab_ecs.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpplab_ecs.dir/src
+  dyndep = CMakeFiles/cpplab_ecs.dir/CXX.dd
+
+build CMakeFiles/cpplab_ecs.dir/CXX.dd | /home/proj/game-engine/build/CMakeFiles/cpplab_ecs.dir/CXXModules.json CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.modmap: CXX_DYNDEP__cpplab_ecs_Debug CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o.ddi | /home/proj/game-engine/build/CMakeFiles/cpplab_ecs.dir/CXXDependInfo.json /home/proj/game-engine/build/CMakeFiles/game_modules.dir/CXXModules.json
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target cpplab_ecs
+
+
+#############################################
+# Link the executable cpplab_ecs
+
+build cpplab_ecs: CXX_EXECUTABLE_LINKER__cpplab_ecs_Debug CMakeFiles/cpplab_ecs.dir/src/main-ecs.cpp.o | libgame_modules.a /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/libSDL3_ttf.so.0.2.2 /nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib/libSDL3.so.0.2.12 || libgame_modules.a
+  DEP_FILE = CMakeFiles/cpplab_ecs.dir/link.d
+  FLAGS = -g
+  LINK_FLAGS = -stdlib=libstdc++ -Xlinker --dependency-file=CMakeFiles/cpplab_ecs.dir/link.d
+  LINK_LIBRARIES = -Wl,-rpath,/nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib:  libgame_modules.a  /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/libSDL3_ttf.so.0.2.2  /nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib/libSDL3.so.0.2.12
+  OBJECT_DIR = CMakeFiles/cpplab_ecs.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = cpplab_ecs
+  TARGET_PDB = cpplab_ecs.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target cpplab_oop
+
+
+#############################################
+# Order-only phony target for cpplab_oop
+
+build cmake_object_order_depends_target_cpplab_oop: phony || cmake_object_order_depends_target_game_modules
+
+build CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.ddi: CXX_SCAN__cpplab_oop_Debug /home/proj/game-engine/src/main-oop.cpp || cmake_object_order_depends_target_cpplab_oop
+  DEP_FILE = CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.ddi
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJ_FILE = CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.ddi.i
+
+build CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o: CXX_COMPILER__cpplab_oop_scanned_Debug /home/proj/game-engine/src/main-oop.cpp | CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.modmap || cmake_object_order_depends_target_cpplab_oop CMakeFiles/cpplab_oop.dir/CXX.dd
+  DEP_FILE = CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.modmap
+  FLAGS = -g -std=c++26 -fcolor-diagnostics -stdlib=libstdc++
+  INCLUDES = -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include -isystem /nix/store/czr12n94hn0rp4nlhsznv6im1gv8fsfh-compiler-rt-libc-19.1.7-dev/include -isystem /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/include -isystem /nix/store/j16gwk21wpzliw3slgglbdb7nk5hrcdm-mesa-25.1.2/include -isystem /nix/store/y0c6p6cxq0nyh09lw0lpwps5i3dn1v6n-libglvnd-1.7.0-dev/include -isystem /nix/store/17mijr1mvgcz2mh22rs7h8qmipwf3m7w-wayland-1.23.1-dev/include -isystem /nix/store/7jyyf32al4fm91a2dw6n3d8ykq2jxvxb-libxkbcommon-1.8.1-dev/include -isystem /nix/store/6ccjrgkvzrnfl3v7wznp1c0rav34c05h-libcxx-19.1.7-dev/include/c++/v1 -isystem /nix/store/r6c40qqjyzafdswz9p8lv3almzhhimn7-clang-wrapper-19.1.7/resource-root/include -isystem /nix/store/r25srliigrrv5q3n7y8ms6z10spvjcd9-glibc-2.40-66-dev/include
+  OBJECT_DIR = CMakeFiles/cpplab_oop.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpplab_oop.dir/src
+  dyndep = CMakeFiles/cpplab_oop.dir/CXX.dd
+
+build CMakeFiles/cpplab_oop.dir/CXX.dd | /home/proj/game-engine/build/CMakeFiles/cpplab_oop.dir/CXXModules.json CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.modmap: CXX_DYNDEP__cpplab_oop_Debug CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o.ddi | /home/proj/game-engine/build/CMakeFiles/cpplab_oop.dir/CXXDependInfo.json /home/proj/game-engine/build/CMakeFiles/game_modules.dir/CXXModules.json
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target cpplab_oop
+
+
+#############################################
+# Link the executable cpplab_oop
+
+build cpplab_oop: CXX_EXECUTABLE_LINKER__cpplab_oop_Debug CMakeFiles/cpplab_oop.dir/src/main-oop.cpp.o | libgame_modules.a /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/libSDL3_ttf.so.0.2.2 /nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib/libSDL3.so.0.2.12 || libgame_modules.a
+  DEP_FILE = CMakeFiles/cpplab_oop.dir/link.d
+  FLAGS = -g
+  LINK_FLAGS = -stdlib=libstdc++ -Xlinker --dependency-file=CMakeFiles/cpplab_oop.dir/link.d
+  LINK_LIBRARIES = -Wl,-rpath,/nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib:  libgame_modules.a  /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/libSDL3_ttf.so.0.2.2  /nix/store/lq0kv9jwgypcilcg9k39mz1h4gppr98v-sdl3-3.2.12-lib/lib/libSDL3.so.0.2.12
+  OBJECT_DIR = CMakeFiles/cpplab_oop.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = cpplab_oop
+  TARGET_PDB = cpplab_oop.dbg
 
 
 #############################################
@@ -206,6 +280,8 @@ build install/strip: phony CMakeFiles/install/strip.util
 # =============================================================================
 # Target aliases.
 
+build game_modules: phony libgame_modules.a
+
 # =============================================================================
 # Folder targets.
 
@@ -221,7 +297,7 @@ build codegen: phony
 #############################################
 # Folder: /home/proj/game-engine/build
 
-build all: phony cpplab
+build all: phony libgame_modules.a cpplab_ecs cpplab_oop
 
 # =============================================================================
 # Built-in targets
@@ -230,14 +306,14 @@ build all: phony cpplab
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/proj/game-engine/CMakeLists.txt /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3Config.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3ConfigVersion.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3headersTargets.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3sharedTargets-release.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3sharedTargets.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3testTargets-release.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3testTargets.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/Clang-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/Clang.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/FeatureSummary.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Linker/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-Clang-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/proj/game-engine/CMakeLists.txt /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf/SDL3_ttf-shared-targets-release.cmake /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf/SDL3_ttf-shared-targets.cmake /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf/SDL3_ttfConfig.cmake /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf/SDL3_ttfConfigVersion.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3Config.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3ConfigVersion.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3headersTargets.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3sharedTargets-release.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3sharedTargets.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3testTargets-release.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3testTargets.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/Clang-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/Clang.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/FeatureSummary.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Linker/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-Clang-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/proj/game-engine/CMakeLists.txt /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3Config.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3ConfigVersion.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3headersTargets.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3sharedTargets-release.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3sharedTargets.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3testTargets-release.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3testTargets.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/Clang-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/Clang.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/FeatureSummary.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Linker/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-Clang-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
+build /home/proj/game-engine/CMakeLists.txt /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf/SDL3_ttf-shared-targets-release.cmake /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf/SDL3_ttf-shared-targets.cmake /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf/SDL3_ttfConfig.cmake /nix/store/4207p1r1vdnjwrdrl2pwj7bwwrf8rkbc-sdl3-ttf-3.2.2/lib/cmake/SDL3_ttf/SDL3_ttfConfigVersion.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3Config.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3ConfigVersion.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3headersTargets.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3sharedTargets-release.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3sharedTargets.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3testTargets-release.cmake /nix/store/lglz8qwaif4mnckclz20qvjdcsx5v32f-sdl3-3.2.12-dev/lib/cmake/SDL3/SDL3testTargets.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/Clang-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/Clang.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Compiler/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/FeatureSummary.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Linker/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-Clang-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/Linux.cmake /nix/store/wphngc22a7aphbp5pi5jqmqlsqmisgn5-cmake-3.31.6/share/cmake-3.31/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -1,0 +1,2 @@
+-x c++-module
+-fmodule-output=CMakeFiles/game_modules.dir/dag.pcm
